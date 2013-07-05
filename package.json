@@ -1,0 +1,9 @@
+{
+    "name": "ipaddr",
+    "version": "0.0.2",
+    "description": "get computer's ipv4 address.",
+    "preferGlobal": "true",
+    "bin": { "ip": "ip.js" },
+    "author": "steel1990",
+    "engines": { "node": "*" }
+}
