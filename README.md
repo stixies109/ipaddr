@@ -3,6 +3,8 @@ ipaddr
 
 ipaddr is a command line tool that can let you know your computer's ipv4 address very easy.
 
+## How To Use
+
 Just text `ip` and press enter in your command line, then you can see your ipv4 address below.
 
 ## How To Install ipaddr
