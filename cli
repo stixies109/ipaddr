@@ -1,0 +1,4 @@
+#!/usr/bin/env node
+
+var getIp = require('./ip.js').getIp;
+console.log(getIp());
