@@ -7,7 +7,3 @@ if (process.argv.length > 2) {
 } else {
     console.log(ip.getCurrentIp());
 }
-
-setTimeout(function(){
-    console.log('end');
-}, 3000);
