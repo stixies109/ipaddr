@@ -1,4 +1,13 @@
-#!/usr/bin/env node
+#! /usr/bin/env node
 
-var getIp = require('./ip.js').getIp;
-console.log(getIp());
+var ip = require('./ip.js');
+
+if (process.argv.length > 2) {
+    ip.getAddress(process.argv[2]);
+} else {
+    console.log(ip.getCurrentIp());
+}
+
+setTimeout(function(){
+    console.log('end');
+}, 3000);

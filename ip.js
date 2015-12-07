@@ -1,4 +1,7 @@
-exports.getIp = function(){
+var http = require("http");
+var bl = require("bl");
+
+exports.getCurrentIp = function(){
     /**
      * 系统模块
      * @type {Object}
@@ -23,4 +26,19 @@ exports.getIp = function(){
         }
     }
     return result;
+};
+
+exports.getAddress = function (ip) {
+    http.get('http://ip.taobao.com/service/getIpInfo.php?ip=' + ip, function (res) {
+        res.pipe(bl(function (err, data) {
+            if (err) {
+                console.log('error:', err);
+                return;
+            }
+            data = JSON.parse(data).data;
+            console.log(ip, data.country || '', data.region || '', data.isp || '');
+        }));
+    }).on('error', function(e) {
+        console.log("Got error: " + e.message);
+    });
 };
