@@ -1,6 +1,6 @@
 {
   "name": "ipaddr",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "get computer's ipv4 address.",
   "preferGlobal": "true",
   "main": "./ip",

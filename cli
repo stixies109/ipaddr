@@ -3,7 +3,12 @@
 var ip = require('./ip.js');
 
 if (process.argv.length > 2) {
-    ip.getAddress(process.argv[2]);
+    var addr = process.argv[2];
+    if (/(?:\d+\.){3}\d+/.test(addr)) {
+        ip.getAddress(addr);
+    } else {
+        ip.traceRoute(addr.replace(/^(?:https?:)?\/\//, '').replace(/\/+$/, ''));
+    }
 } else {
     console.log(ip.getCurrentIp());
 }
