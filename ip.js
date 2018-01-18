@@ -30,7 +30,7 @@ exports.getCurrentIp = function(){
 };
 
 exports.getAddress = function (ip, callback) {
-    http.get('http://ip.taobao.com/service/getIpInfo.php?ip=' + ip, function (res) {
+    http.get('http://null.develocean.com/getIpInfo.php?ip=' + ip, function (res) {
         res.pipe(bl(function (err, data) {
             if (err) {
                 console.log('error:', err);
